@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Form</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container">
+        <div class="box">
+            <h3>Enter your details</h3>
+            <div id="invoice">
+                <div class="name">
+                    <i class="fas fa-user"></i>
+                    <input type="text" placeholder="Name" id="contact-name" onkeyup="validateName()" name="fname" required>
+                    <span id="name-error"></span>
+                </div>
+                <div class="email">
+                    <i class="fas fa-envelope"></i>
+                    <input type="email" name="femail" placeholder="Email" id="contact-email" onkeyup="validateEmail()" required>                            <span id="email-error"></span>
+                </div>
+                <div class="phone">
+                    <i class="fas fa-call"></i>
+                    <input type="tel" name="fphone" placeholder="Phone" id="contact-phone" onkeyup="validatePhone()" required>
+                    <span id="phone-error"></span>
+                </div>
+                <div class="message-box">
+                    <div class="typed-text">
+                        <textarea id="text" cols="30" rows="10" placeholder="Message" type="text" name="ftext" id="contact-message" onkeyup="validateMessage()" required></textarea>
+                    </div>
+                </div> 
+            </div>
+            <div class="button">
+                <button id="send" onclick="openPopup()">Submit</button>
+                <div class="popup" id="popup">
+                    <h3>Want to save the form in PDF form?</h3>
+                    <p>Click below!</p>
+                    <button type="button" onclick="closePopup()">SAVE</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="main.js"></script>
+    <script src="https://raw.githack.com/eKoopmans/html2pdf/master/dist/html2pdf.bundle.js"></script>
+</body>
+</html>
